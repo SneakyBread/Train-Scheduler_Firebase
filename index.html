@@ -4,19 +4,46 @@
     <title>Train Scheduler!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- insert firebase reference -->
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <!-- insert moment.js reference -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es-us.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js" integrity="sha256-CutOzxCRucUsn6C6TcEYsauvvYilEniTXldPa6/wu0k=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        .jumbotron {
+            background-color: #03a9f4;
+        }
+
+        body {
+            background-color: #424242;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        h1 {
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .btn-color {
+            background-color: #9e9e9e;
+        }
+
+    </style>
 
 </head>
 
-<body class="bg-secondary">
+<body>
 <div class="container">
-    <div class="jumbotron col-md-12 text-center bg-primary">
-        <h1>Anytime Is Train Time</h1>
+    <div class="jumbotron col-md-12 text-center">
+        <i class="fas fa-train"></i>
+        <h1>ANYTIME IS TRAIN TIME</h1>
         <p>Choo Choo. All aboarrd!</p>
     </div>
 
@@ -35,8 +62,8 @@
                                 <th scope="col">Minutes Away</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- info will be put here? -->
+                        <tbody id="newInfo">
+                            <!-- info will be put here -->
                         </tbody>
                     </table>
                 </div>
@@ -52,19 +79,19 @@
                     <form>
                         <div class="form-group">
                             <label for="train-name-input">Train Name</label>
-                            <input class="form-control" id="train-name-input" type="text">
+                            <input class="form-control formZ" id="train-name-input" type="text">
                         </div>
                         <div class="form-group">
                             <label for="destination-input">Destination</label>
-                            <input class="form-control" id="destination-input" type ="text">
+                            <input class="form-control formZ" id="destination-input" type ="text">
                         </div>
                         <div class="form-group">
                             <label for="train-time-input">First Train Time (HH:mm - military time)</label>
-                            <input class="form-control" id="train-time-input" type="text">
+                            <input class="form-control formZ" id="train-time-input" type="text">
                         </div>
                         <div class="form-group">
                             <label for="frequency-input">Frequency (min)</label>
-                            <input class="form-control" id="frequency-input" type="text">
+                            <input class="form-control formZ" id="frequency-input" type="text">
                         </div>
                         <button type="submit" class="btn btn-primary" id="add-train-btn">Submit</button>
                     </form>
